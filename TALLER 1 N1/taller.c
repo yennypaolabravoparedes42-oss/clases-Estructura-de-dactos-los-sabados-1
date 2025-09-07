@@ -49,6 +49,20 @@ void mostrarArray(int vector[MAX], int n){
      printf("\n");
 }
 
+void selectSort(int array[MAX], int n){
+    for (int i = 0; i < n - 1; i++){
+        int ninIndex = i;
+        for (int j = i + 1; j < n; j++){
+            if (array[j] < array[minIndex]) {
+
+            }
+            
+        }
+        
+    }
+    
+}
+
 void selectionSort(int array[MAX], int n) { 
     for (int i = 0; i < n - 1; i++) { 
         int minIndex = i;
@@ -60,7 +74,7 @@ void selectionSort(int array[MAX], int n) {
         int temp = array[i]; 
         array[i] = array[minIndex]; 
         array[minIndex] = temp;
-        printf("intercambio %d con %d: \n", array[i],array[minIndex]);
+        printf("\nintercambio %d con %d: \n", array[i],array[minIndex]);
         mostrarArray(array, n);
     } 
 } 
