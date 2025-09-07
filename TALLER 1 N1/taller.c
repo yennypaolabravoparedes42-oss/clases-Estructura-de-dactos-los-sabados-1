@@ -78,24 +78,24 @@ void insertionSort(int arr[], int n) {
     int j = i - 1;      
 
     while (j >= 0 && arr[j] > clave) {
-      arr[j + 1] = arr[j];
+      array[j + 1] = arr[j];
       j--;
     }
-    arr[j + 1] = clave;
+    array[j + 1] = clave;
   }
 }
 
 int main() {
     int arr[] = {12, 11, 13, 5, 6};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n = sizeof(array) / sizeof(array[0]);
 
         printf("Arreglo original: \n");
-        imprimirArreglo(arr, n);
+        imprimirArreglo(array, n);
 
-        insertionSort(arr, n);
+        insertionSort(array, n);
 
         printf("\nArreglo ordenado: \n");
-        imprimirArreglo(arr, n);
+        imprimirArreglo(array, n);
 
     return 0;
 }
