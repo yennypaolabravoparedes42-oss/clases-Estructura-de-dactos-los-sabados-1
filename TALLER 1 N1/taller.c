@@ -49,20 +49,6 @@ void mostrarArray(int vector[MAX], int n){
      printf("\n");
 }
 
-void selectSort(int array[MAX], int n){
-    for (int i = 0; i < n - 1; i++){
-        int ninIndex = i;
-        for (int j = i + 1; j < n; j++){
-            if (array[j] < array[minIndex]) {
-
-            }
-            
-        }
-        
-    }
-    
-}
-
 void selectionSort(int array[MAX], int n) { 
     for (int i = 0; i < n - 1; i++) { 
         int minIndex = i;
