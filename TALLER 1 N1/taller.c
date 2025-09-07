@@ -2,7 +2,7 @@
 #define MAX 10
 void llenarArray(int vector[MAX], int n);
 void mostrarArray(int vector[MAX], int n);
-void selectSort(int vector[MAX], int n);
+void selectSort(int array[MAX], int n);
 int main(){
     int arreglo[MAX];
     int opc; 
@@ -61,6 +61,6 @@ void selectionSort(int array[MAX], int n) {
         array[i] = array[minIndex]; 
         array[minIndex] = temp;
         printf("intercambio %d con %d: \n", array[i],array[minIndex]);
-        mostrarArray(array, n)
+        mostrarArray(array, n);
     } 
 } 
