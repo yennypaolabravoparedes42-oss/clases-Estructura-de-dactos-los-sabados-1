@@ -8,4 +8,5 @@ Estructura de Datos
 - Wilner Andrés González González
 
 ## Algoritmo: 
-Selection Sortg
+- Selection Sort
+- Insertion sort
