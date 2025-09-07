@@ -9,4 +9,7 @@ Estructura de Datos
 
 ## Algoritmo: 
 - Selection Sort
-- Insertion sort
+- Insertion Sort
+
+## Comentarios
+- Hasta ahora esta hecho Llenar y mostrar eso es el punto 1 del taller.
