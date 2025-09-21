@@ -12,7 +12,7 @@ Estudiante estudiantes[MAX] = {
     {2024104, 5.0},
     {2024101, 4.5},
     {2024103, 2.8},
-};  // ← punto y coma obligatorio
+}
 
 void mostrarEstudiantes(Estudiante arr[MAX], int n) {
     for (int i = 0; i < n; i++) {
@@ -25,7 +25,11 @@ float notaMaxima(Estudiante arr[MAX], int i, int n) {
         return arr[i].nota;
     }
     float maxResto = notaMaxima(arr, i + 1, n);
-    return (arr[i].nota > maxResto) ? arr[i].nota : maxResto;
+    if (arr[i].nota > maxResto) {
+        return arr[i].nota;
+    } else {
+        return maxResto;
+    }
 }
 
 float sumaNotas(Estudiante arr[MAX], int i, int n) {
