@@ -4,7 +4,7 @@
 - Estructura de Datos
 
 ## Integrante:
-- 
+- Yenny Paola Bravo Paredes
 
 ## Objetivo General
 - Desarrollar una aplicación en C que gestione una lista predefinida de estudiantes (código y nota).
