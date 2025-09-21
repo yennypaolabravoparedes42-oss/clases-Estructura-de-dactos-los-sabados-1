@@ -1,19 +1,19 @@
 #include <stdio.h>
 #define MAX 5
 
-// Definición de la estructura
+
 typedef struct {
     int codigo;
     float nota;
 } Estudiante;
 
-// Prototipos de funciones
+
 void mostrarEstudiantes(Estudiante arr[MAX], int n);
 float notaMaxima(Estudiante arr[MAX], int n, int i, float max);
 float promedioNotas(Estudiante arr[MAX], int n, int i, float suma);
 void selectionSort(Estudiante arr[MAX], int n, int i);
 
-// Función principal
+
 int main() {
     Estudiante estudiantes[MAX] = {
         {2024105, 4.0},
@@ -29,7 +29,7 @@ int main() {
         printf("1. Mostrar estudiantes\n");
         printf("2. Buscar la nota máxima (recursivo)\n");
         printf("3. Calcular el promedio (recursivo)\n");
-        printf("4. Ordenar estudiantes por código (Selection Sort recursivo)\n");
+        printf("4. Ordenar estudiantes por codigo (Selection Sort recursivo)\n");
         printf("5. Salir\n");
         printf("Ingrese una opcion: ");
         scanf("%d", &opcion);
@@ -54,7 +54,6 @@ int main() {
     return 0;
 }
 
-// Implementaciones de funciones
 void mostrarEstudiantes(Estudiante arr[MAX], int n) {
     for (int i = 0; i < n; i++) {
         printf("Codigo: %d - Nota: %.2f\n", arr[i].codigo, arr[i].nota);
@@ -82,7 +81,6 @@ void selectionSort(Estudiante arr[MAX], int n, int i) {
         }
     }
 
-    // Intercambio
     Estudiante temp = arr[i];
     arr[i] = arr[minIndex];
     arr[minIndex] = temp;
