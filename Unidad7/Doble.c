@@ -18,27 +18,27 @@ int abordajeIniciado = 0;
 
 void establecerCapacidad() {
     if (capacidad > 0) {
-        printf("⚠️ La capacidad ya fue establecida.\n");
+        printf("La capacidad ya fue establecida.\n");
         return;
     }
     printf("Ingrese la capacidad máxima del avión: ");
     scanf("%d", &capacidad);
-    printf("✅ Capacidad establecida en %d pasajeros.\n", capacidad);
+    printf("Capacidad establecida en %d pasajeros.\n", capacidad);
 }
 
 void venderTiquete() {
     if (capacidad == 0) {
-        printf("⚠️ Primero debe establecer la capacidad del avión.\n");
+        printf("Primero debe establecer la capacidad del avión.\n");
         return;
     }
     if (abordajeIniciado) {
-        printf("⚠️ No se pueden vender más tiquetes, el abordaje ya inició.\n");
+        printf("No se pueden vender más tiquetes, el abordaje ya inició.\n");
         return;
     }
 
     int limiteSobreventa = capacidad + (capacidad * 0.1);
     if (totalVendidos >= limiteSobreventa) {
-        printf("⚠️ Se alcanzó el límite de sobreventa (%d tiquetes).\n", limiteSobreventa);
+        printf("Se alcanzó el límite de sobreventa (%d tiquetes).\n", limiteSobreventa);
         return;
     }
 
@@ -68,16 +68,16 @@ void venderTiquete() {
     }
 
     totalVendidos++;
-    printf("✅ Tiquete vendido a %s (%s)\n", nuevo->apellido, nuevo->genero);
+    printf("Tiquete vendido a %s (%s)\n", nuevo->apellido, nuevo->genero);
 }
 
 void iniciarAbordaje() {
     if (abordajeIniciado) {
-        printf("⚠️ El abordaje ya fue iniciado.\n");
+        printf(" El abordaje ya fue iniciado.\n");
         return;
     }
     if (lista == NULL) {
-        printf("⚠️ No hay pasajeros registrados.\n");
+        printf(" No hay pasajeros registrados.\n");
         return;
     }
 
@@ -107,7 +107,7 @@ void iniciarAbordaje() {
     }
 
     lista = NULL;
-    printf("🛫 Abordaje completado. %d pasajeros abordaron.\n", contador);
+    printf(" Abordaje completado. %d pasajeros abordaron.\n", contador);
 }
 
 void verLista(Pasajero* lista) {
@@ -123,12 +123,12 @@ void verLista(Pasajero* lista) {
 }
 
 void verAbordados() {
-    printf("\n🟢 Pasajeros abordados:\n");
+    printf("\nPasajeros abordados:\n");
     verLista(abordados);
 }
 
 void verNoAbordados() {
-    printf("\n🔴 Pasajeros que no abordaron:\n");
+    printf("\nPasajeros que no abordaron:\n");
     verLista(noAbordados);
 }
 
@@ -151,7 +151,7 @@ int main() {
             case 3: iniciarAbordaje(); break;
             case 4: verAbordados(); break;
             case 5: verNoAbordados(); break;
-            case 6: printf("👋 Saliendo...\n"); break;
+            case 6: printf("Saliendo...\n"); break;
             default: printf("Opción no válida.\n");
         }
     } while (opcion != 6);
