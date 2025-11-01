@@ -3,8 +3,6 @@
 #include <string.h>
 #include <ctype.h>
 
-/* ==================== FUNCIONES GENERALES ==================== */
-
 void limpiarEntrada() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
@@ -20,7 +18,6 @@ char *leerTexto(const char *mensaje) {
     return res;
 }
 
-/* ==================== PILA DE CADENAS (UNDO/REDO) ==================== */
 
 typedef struct PilaTexto {
     char *texto;
@@ -106,7 +103,6 @@ void simuladorUndoRedo() {
     liberarPila(redo);
 }
 
-/* ==================== INFIX → POSTFIX ==================== */
 
 typedef struct PilaChar {
     char c;
@@ -184,7 +180,6 @@ void convertirInfijaPostfija() {
     free(expr);
 }
 
-/* ==================== EVALUAR POSTFIJA ==================== */
 
 typedef struct NodoNum {
     long val;
@@ -237,7 +232,6 @@ void evaluarPostfija() {
     while (pila) { long tmp; pila = popNum(pila, &tmp); }
 }
 
-/* ==================== COLAS: IMPRESORA, BANCO, PRIORIDAD, RR ==================== */
 
 typedef struct Trabajo {
     int id, paginas;
@@ -274,7 +268,6 @@ void verColaImp() {
 
 void limpiarImp() { while (inicioImp) { Trabajo *t = inicioImp; inicioImp = inicioImp->sig; free(t); } finImp = NULL; idImp = 1; }
 
-/* Banco Circular */
 typedef struct Cliente {
     int id;
     struct Cliente *sig;
@@ -306,7 +299,6 @@ void mostrarBanco() {
     printf("(inicio)\n");
 }
 
-/* Cola con Prioridad */
 typedef struct NodoPrio {
     int valor, prioridad;
     struct NodoPrio *sig;
@@ -340,7 +332,6 @@ void verPrio() {
         printf("val=%d prio=%d\n", t->valor, t->prioridad);
 }
 
-/* Round Robin */
 typedef struct Proceso {
     int id, restante;
     struct Proceso *sig;
@@ -378,7 +369,6 @@ void ejecutarRR() {
     }
 }
 
-/* ==================== MENÚ PRINCIPAL ==================== */
 
 int main() {
     int op;
